@@ -21,7 +21,7 @@ pipeline{
      
       stage('post build') {
             steps {
-                archiveArtifacts artifacts: '**/target/spring-petclinic-3.0.0-SNAPSHOT.jar',
+                archiveArtifacts artifacts: '/home/ubuntu/workspace/workspace/mvn freestyle/target/spring-petclinic-3.2.0-SNAPSHOT.jar.original',
                                  onlyIfSuccessful: true
                 junit testResults: '**/surefire-reports/TEST-*.xml'
             }
