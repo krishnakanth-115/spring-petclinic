@@ -12,7 +12,7 @@ pipeline{
         }
      stage('build'){
            tools {
-                 maven "MVN_3.9.5"
+                 maven "3.9.5"
                 }
            steps{
                 sh "mvn package"
