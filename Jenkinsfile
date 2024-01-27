@@ -25,7 +25,7 @@ pipeline{
                     sh 'mvn clean package sonar:sonar -Dsonar.organization=springpetclinic1'
                 }
             }
-        
+     }
        stage('post build') {
             steps {
                 archiveArtifacts artifacts: '**/spring-petclinic-*.jar',
