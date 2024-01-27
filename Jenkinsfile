@@ -26,8 +26,7 @@ pipeline{
                 }
             }
         
-     
-      stage('post build') {
+       stage('post build') {
             steps {
                 archiveArtifacts artifacts: '**/spring-petclinic-*.jar',
                                  onlyIfSuccessful: true
@@ -35,6 +34,4 @@ pipeline{
             }
         }
      } 
-
-
 }
